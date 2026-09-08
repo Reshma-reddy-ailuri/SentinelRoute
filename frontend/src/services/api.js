@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 // Base API client using relative URL to leverage Vite proxy or fallback to localhost:8000
-const API_BASE = '/api';
+// Backend API URL
+const API_BASE = 'https://sentinelroute-backend-xefk.onrender.com/api';
 
 export const sendChatPrompt = async (prompt, userId = 'employee_user') => {
   try {
