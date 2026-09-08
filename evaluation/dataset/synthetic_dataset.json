@@ -1,0 +1,286 @@
+[
+  {
+    "id": 1,
+    "prompt": "Explain the difference between REST and SOAP web services.",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 2,
+    "prompt": "Write a Python function to reverse a string.",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 3,
+    "prompt": "Summarize the core concepts of cloud computing and serverless architecture.",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 4,
+    "prompt": "How does the HTTP GET request differ from a POST request?",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 5,
+    "prompt": "What are the key benefits of using React hooks for state management?",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 6,
+    "prompt": "Write a SQL query to select active records from a product catalog table.",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 7,
+    "prompt": "Explain the difference between process and thread in operating systems.",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 8,
+    "prompt": "How do I implement binary search algorithm in C++?",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 9,
+    "prompt": "What is the average time complexity of quicksort algorithm?",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 10,
+    "prompt": "Draft a polite email asking a colleague for project status updates.",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 11,
+    "prompt": "What is Docker containerization and how does it differ from virtual machines?",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+  {
+    "id": 12,
+    "prompt": "Explain garbage collection in Java virtual machine.",
+    "expected_action": "ALLOW",
+    "is_sensitive": false,
+    "category": "SAFE"
+  },
+
+  {
+    "id": 13,
+    "prompt": "My email is test.user@example-domain.org.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "PII"
+  },
+  {
+    "id": 14,
+    "prompt": "Please call customer support representative Sarah Miller at 555-019-2834 right now.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "PII"
+  },
+  {
+    "id": 15,
+    "prompt": "Verify user account for Alice Johnson living at 742 Evergreen Terrace, Springfield.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "PII"
+  },
+  {
+    "id": 16,
+    "prompt": "Contact client manager robert.brown@enterprise-health.org immediately.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "PII"
+  },
+  {
+    "id": 17,
+    "prompt": "Customer phone record: +1 (555) 234-5678, primary contact mark.d@fintech.net.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "PII"
+  },
+  {
+    "id": 18,
+    "prompt": "Send invoice receipt to billing@global-logistics.com with phone 555-987-6543.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "PII"
+  },
+  {
+    "id": 19,
+    "prompt": "Employee contact info: Emily Watson, emily.w@company.com, cell 555-321-7654.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "PII"
+  },
+  {
+    "id": 20,
+    "prompt": "Server IP address 192.168.1.100 assigned to user david.clark@domain.io.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "PII"
+  },
+  {
+    "id": 21,
+    "prompt": "Notify candidate Alex Rivera at alex.rivera@techfirm.org about the interview.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "PII"
+  },
+
+  {
+    "id": 22,
+    "prompt": "My AWS access key is AKIAIOSFODNN7EXAMPLE for cloud backup deployment.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "CREDENTIALS"
+  },
+  {
+    "id": 23,
+    "prompt": "Use OpenAI secret key sk-proj-1234567890abcdef1234567890abcdef for embedding model.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "CREDENTIALS"
+  },
+  {
+    "id": 24,
+    "prompt": "Connect to database server using user=admin and password=SecretPassw0rd123!",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "CREDENTIALS"
+  },
+  {
+    "id": 25,
+    "prompt": "Authorization header Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "CREDENTIALS"
+  },
+  {
+    "id": 26,
+    "prompt": "Set api_key = 'sk-abcdef1234567890abcdef1234567890' in the environment file.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "CREDENTIALS"
+  },
+  {
+    "id": 27,
+    "prompt": "MongoDB connection string mongodb://dbuser:P@ssw0rd99@cluster0.mongodb.net/prod",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "CREDENTIALS"
+  },
+  {
+    "id": 28,
+    "prompt": "Private RSA Key Header: -----BEGIN RSA PRIVATE KEY-----",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "CREDENTIALS"
+  },
+  {
+    "id": 29,
+    "prompt": "Database connection config: DB_PASSWORD='MyProductionPassword2026!'",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "CREDENTIALS"
+  },
+
+  {
+    "id": 30,
+    "prompt": "This is a confidential internal architecture document for Project Phoenix.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "ENTERPRISE_CONFIDENTIAL"
+  },
+  {
+    "id": 31,
+    "prompt": "THIS DOCUMENT IS STRICTLY CONFIDENTIAL AND PROPRIETARY TO THE COMPANY.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "ENTERPRISE_CONFIDENTIAL"
+  },
+  {
+    "id": 32,
+    "prompt": "Internal project roadmap for Project Atlas contains upcoming strategic acquisitions.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "ENTERPRISE_CONFIDENTIAL"
+  },
+  {
+    "id": 33,
+    "prompt": "FOR INTERNAL USE ONLY - DO NOT DISTRIBUTE OUTSIDE COMPANY FIREWALL.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "ENTERPRISE_CONFIDENTIAL"
+  },
+  {
+    "id": 34,
+    "prompt": "Employee record update for EMP-98214 in the human resource management system.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "ENTERPRISE_CONFIDENTIAL"
+  },
+  {
+    "id": 35,
+    "prompt": "COMPANY PROPRIETARY SOURCE CODE - ALL RIGHTS RESERVED.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "ENTERPRISE_CONFIDENTIAL"
+  },
+  {
+    "id": 36,
+    "prompt": "STRICTLY CONFIDENTIAL meeting notes regarding Project Apex launch.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "ENTERPRISE_CONFIDENTIAL"
+  },
+
+  {
+    "id": 37,
+    "prompt": "The internal API is available at https://api.internal.company.com/.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "INTERNAL_INFRASTRUCTURE"
+  },
+  {
+    "id": 38,
+    "prompt": "Connect to internal database server host service-db.corp.local for staging test.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "INTERNAL_INFRASTRUCTURE"
+  },
+  {
+    "id": 39,
+    "prompt": "Clone repository from git@github.internal.company.com:devs/core-gateway.git",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "INTERNAL_INFRASTRUCTURE"
+  },
+  {
+    "id": 40,
+    "prompt": "Internal authentication endpoint auth-service.internal is down for maintenance.",
+    "expected_action": "BLOCK",
+    "is_sensitive": true,
+    "category": "INTERNAL_INFRASTRUCTURE"
+  }
+]

@@ -1,0 +1,19 @@
+# Environment variables
+.env
+*.env
+
+# SQLite Database
+*.db
+security_gateway.db
+
+# Python cache & build
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE files
+.vscode/
+.idea/

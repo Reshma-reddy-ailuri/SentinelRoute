@@ -1,0 +1,81 @@
+{
+  "_comment": "Configuration file for organization-specific internal confidential data indicators. Contains demonstration values that can be customized per enterprise policy.",
+  "confidentiality_markers": [
+    {
+      "pattern": "\\b(?:STRICTLY\\s+CONFIDENTIAL|INTERNAL\\s+USE\\s+ONLY|COMPANY\\s+PROPRIETARY|RESTRICTED\\s+DATA|NOT\\s+FOR\\s+DISTRIBUTION|DO\\s+NOT\\s+DISTRIBUTE|CONFIDENTIAL|INTERNAL\\s+ONLY)\\b",
+      "entity_type": "CONFIDENTIAL_MARKER",
+      "severity": "HIGH",
+      "description": "Enterprise Confidentiality Classification Marker"
+    }
+  ],
+  "internal_projects": [
+    {
+      "name": "Project Phoenix",
+      "pattern": "\\bProject\\s+Phoenix\\b",
+      "entity_type": "INTERNAL_PROJECT_NAME",
+      "severity": "HIGH",
+      "description": "Configurable Internal Project Code Name: Project Phoenix"
+    },
+    {
+      "name": "Project Atlas",
+      "pattern": "\\bProject\\s+Atlas\\b",
+      "entity_type": "INTERNAL_PROJECT_NAME",
+      "severity": "HIGH",
+      "description": "Configurable Internal Project Code Name: Project Atlas"
+    },
+    {
+      "name": "Project Titan",
+      "pattern": "\\bProject\\s+Titan\\b",
+      "entity_type": "INTERNAL_PROJECT_NAME",
+      "severity": "HIGH",
+      "description": "Configurable Internal Project Code Name: Project Titan"
+    },
+    {
+      "name": "Project Apex",
+      "pattern": "\\bProject\\s+Apex\\b",
+      "entity_type": "INTERNAL_PROJECT_NAME",
+      "severity": "HIGH",
+      "description": "Configurable Internal Project Code Name: Project Apex"
+    }
+  ],
+  "internal_infrastructure": [
+    {
+      "pattern": "https?://[a-zA-Z0-9.-]*internal[a-zA-Z0-9.-]*\\.[a-zA-Z]{2,}(?:/[^\\s]*)?",
+      "entity_type": "INTERNAL_INFRASTRUCTURE_URL",
+      "severity": "HIGH",
+      "description": "Internal Enterprise Network / API Endpoint URL"
+    },
+    {
+      "pattern": "\\b[a-zA-Z0-9._%+-]+\\.(?:internal|corp|local|intranet)\\b",
+      "entity_type": "INTERNAL_DOMAIN",
+      "severity": "HIGH",
+      "description": "Internal Corporate Domain / Hostname"
+    },
+    {
+      "pattern": "(?:git@[a-zA-Z0-9.-]*internal|https?://gitlab\\.internal|https?://git\\.corp)\\.[a-zA-Z]{2,}",
+      "entity_type": "INTERNAL_REPOSITORY",
+      "severity": "HIGH",
+      "description": "Internal Code Repository Endpoint"
+    },
+    {
+      "pattern": "\\b[a-zA-Z0-9_-]+-service\\.internal\\b",
+      "entity_type": "INTERNAL_SERVICE_NAME",
+      "severity": "HIGH",
+      "description": "Internal Service Mesh Hostname"
+    }
+  ],
+  "source_code_indicators": [
+    {
+      "pattern": "(?:DB_HOST|DB_PASSWORD|DATABASE_URL|JDBC_URL)\\s*=\\s*['\"]?\\S+['\"]?",
+      "entity_type": "DATABASE_CONNECTION_CONFIG",
+      "severity": "CRITICAL",
+      "description": "Database Connection Configuration Snippet"
+    },
+    {
+      "pattern": "```(?:sql|python|java|javascript|bash|c|cpp)\\s+[\\s\\S]+?```",
+      "entity_type": "SOURCE_CODE_SNIPPET",
+      "severity": "HIGH",
+      "description": "Embedded Source Code Block"
+    }
+  ]
+}
