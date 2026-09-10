@@ -19,9 +19,8 @@ APP_NAME = "Enterprise GenAI Security Gateway"
 DEBUG = os.getenv("DEBUG", "True").lower() == "true"
 
 # Database Configuration
-# Default to SQLite database stored in backend root
-DB_PATH = BASE_DIR / "security_gateway.db"
-DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{DB_PATH.as_posix()}")
+# Use a persistent SQLite file on Render-mounted storage. Local dev can override via env.
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:////var/data/security_gateway.db")
 
 # External LLM Configuration
 # Primary Provider: "groq" (also supports "openai")
