@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 def ensure_sqlite_parent_dir():
-    """Ensure the SQLite directory exists for Render persistent storage."""
+    """Ensure the local SQLite directory exists for development fallback."""
     if not DATABASE_URL.startswith("sqlite"):
         return
 
@@ -26,11 +26,11 @@ def ensure_sqlite_parent_dir():
 
 ensure_sqlite_parent_dir()
 
-# SQLite database setup with SQLAlchemy
-# check_same_thread=False allows FastAPI multi-threaded request handlers to use the DB connection
+# Use PostgreSQL in Render when DATABASE_URL is set; otherwise fall back to local SQLite for development.
 engine = create_engine(
     DATABASE_URL,
-    connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {}
+    connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {},
+    pool_pre_ping=True,
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
